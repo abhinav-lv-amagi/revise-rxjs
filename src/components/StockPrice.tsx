@@ -6,7 +6,7 @@ const fetchStockPrice = async () => {
     const price = (Math.random() * 1500).toFixed(2);
     setTimeout(() => {
       resolve(price);
-    }, 1000);
+    }, 1000); // this can be a random time b/w 1000 and 3000 to simulate the network latency and working of switchMap
   });
 };
 export default function StockPrice() {
@@ -16,13 +16,16 @@ export default function StockPrice() {
     // if this interval is less than the time taken
     // to fetch the stock price, the price will not be updated.
     const subscription = interval(2000)
-      .pipe(
-        switchMap(() => fetchStockPrice()),
-        tap((newPrice) => console.log("New price: ", newPrice))
-      )
+      .pipe(switchMap(() => fetchStockPrice()))
       .subscribe(setPrice);
 
     return () => subscription.unsubscribe();
   }, []);
-  return <div>{`Stock Price: $${price}`}</div>;
+  return (
+    <div>
+      <h2>Stock Market</h2>
+      <p style={{ marginBottom: "20px" }}>(switchMap)</p>
+      {`Stock Price: ${price ? "$" + price : "loading"}`}
+    </div>
+  );
 }
