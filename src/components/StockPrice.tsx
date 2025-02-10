@@ -11,7 +11,7 @@ const fetchStockPrice = async () => {
 };
 
 /**
- * This component demonstrated the use of `switchMap` operator.
+ * This component demonstrates the use of `switchMap` operator.
  * We fetch the stock price every 2 seconds. If the previous fetch
  * is not completed, the new fetch will cancel the previous one.
  * @returns The StockPrice component
