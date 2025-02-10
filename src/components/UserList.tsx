@@ -18,7 +18,7 @@ const fetchUser = async (id: number) => {
 };
 
 /**
- * This component demonstrates the use of mergeMap operator.
+ * This component demonstrates the use of `mergeMap` operator.
  * We fetch the user details for 5 users by making calls in parallel
  * to the `fetchUser` function, which simulates a different network latency
  * for each user. See the console logs and the order in which the user details

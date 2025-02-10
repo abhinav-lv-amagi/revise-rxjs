@@ -9,6 +9,13 @@ const uploadFile = async (file: File) => {
   );
 };
 
+/**
+ * This component demonstrates the use of `concatMap` operator.
+ * We can upload multiple files at the same time, but the files
+ * are uploaded in sequence. `concatMap` will ensure that the previous
+ * file is uploaded before the next upload is started.
+ * @returns The FileUploadQueue component
+ */
 export default function FileUploadQueue() {
   const [messages, setMessages] = useState<string[]>([]);
 

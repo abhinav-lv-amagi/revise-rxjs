@@ -9,6 +9,13 @@ const fetchStockPrice = async () => {
     }, 1000); // this can be a random time b/w 1000 and 3000 to simulate the network latency and working of switchMap
   });
 };
+
+/**
+ * This component demonstrated the use of `switchMap` operator.
+ * We fetch the stock price every 2 seconds. If the previous fetch
+ * is not completed, the new fetch will cancel the previous one.
+ * @returns The StockPrice component
+ */
 export default function StockPrice() {
   const [price, setPrice] = useState<string | null>(null);
 
