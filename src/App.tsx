@@ -1,4 +1,5 @@
 import StockPrice from "./components/StockPrice";
+import UserList from "./components/UserList";
 
 export default function App() {
   return (
@@ -6,6 +7,8 @@ export default function App() {
       <h1>App</h1>
       <br />
       <StockPrice />
+      <br />
+      <UserList />
     </div>
   );
 }
