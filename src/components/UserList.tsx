@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { from, mergeMap, tap } from "rxjs";
+import { from, mergeMap } from "rxjs";
 
 interface IUser {
   id: number;

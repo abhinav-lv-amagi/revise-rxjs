@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { interval, switchMap, tap } from "rxjs";
+import { interval, switchMap } from "rxjs";
 
 const fetchStockPrice = async () => {
   return new Promise<string>((resolve) => {
