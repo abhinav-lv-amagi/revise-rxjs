@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "rough": "npx nodemon --exec 'clear && node test' --watch test.js"
+    "rough": "yarn nodemon --exec 'clear && node test' --watch test.js"
   },
   "dependencies": {
     "react": "^18.3.1",
